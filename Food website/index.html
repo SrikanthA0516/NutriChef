@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+        <!--used for character encoding-->
+        <meta charset="utf-8">
+        <!--used for responsive web page to adjust in different display sizes-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="HTML, CSS, JAVASCRIPT">
+        <!--used for interexplorer to display in highest-->
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!--meta name="robots" content="NO INDEX, NO FOLLOW"> USED TO NOT APPEAR IN SEARCH ENGINES-->
+        <title>Nutri Chef</title>
+        <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+        <!--how to include external resources-->
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <!--body tag starts here-->
+
+    <body>
+        <div id="container">
+            <!--Nav menu bar-->
+            <nav id="navbar">
+                <div class="logo">
+                    <h1>Nutri CheF.</h1>
+                </div>
+                <input type="checkbox" id="menutoggle">
+                <label for="menutoggle" class="menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <ul>
+                    <li><a href="#" onclick="dispalyLogin()">Account</a></li>
+                    <li><a href="#" onclick="dispalyLogin()">Login</a></li>
+                    <li><a href="#" onclick="dispalyLogin()">Sign up</a></li>
+                    <li><a href="#" class="language"><i class="fa-solid fa-globe"></i> English&ensp;<i class="fa-solid fa-sort-down" style="vertical-align: top"></i></a></li>
+                </ul>    
+            </nav>
+
+            <!--Search engine container-->
+            <div class="search-bg-container">
+                <h2 class="search-heading"><span style="color: #ff6200">Nutri CheF.</span><br>Enjoy Your Healthy Delicious Food</h2>
+                <div class="search">
+                    <form>
+                        <input type="search" placeholder="Search here..">
+                        <i class="fa-solid fa-magnifying-glass" style="padding-left:5px;cursor:pointer;color: #ff7600;"></i>
+                        <i class="fa-sharp fa-solid fa-location-dot" style="padding-left:5px;cursor:pointer;color: #ff7600;"></i>
+
+                    </form>
+                </div>
+            </div>
+
+            <!--about site code starts here-->
+            <div class="aboutsite">
+                <h2>Welcome to Nutri Chef.</h2>
+                <p class="site-description">Discover a unique experience.We prepare healthy, delicious, customized meals &amp; featuring a menu that changes daily with a focus on seasonal and local cuisine deliver. We serve fresh nutritious food and also offers a pure vegetarian recipes without comprimising the food taste. Treat youself to a bowl of healthy delights. So, order your favourite food now and relish the taste of food.</p>
+            </div>
+
+            <!-- offer slider code -->
+            <div class="slider">
+                <div class="slider-heading">
+                    <h2>Today's Special</h2>
+                </div>
+                <div class="slider-left-btn">
+                    <button class="sliderbtns" id="prevbtn"><i class="fa-solid fa-caret-left"></i></button>
+                </div>
+
+                <div class="slider-card-container">
+                    <div class="slider-card">
+                        <img src="./images/sliderimg1.jpg">
+                        <div class="slider-content">
+                            <h4>Veggie Delights</h4>
+                            <p>Pasta colored<br>Farfalle Salad</p>
+                            <button class="slider-card-btn">Try Now <i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                    <div class="slider-card">
+                        <img src="./images/sliderimg2.jpg">
+                        <div class="slider-content">
+                            <h4>Non-Veg Dishes</h4>
+                            <p>Perfect &amp; Juicy <br> Baked Chicken</p>
+                            <button class="slider-card-btn">Try Now <i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                    <div class="slider-card">
+                        <img src="./images/sliderimg3.jpg">
+                        <div class="slider-content">
+                            <h4>Healthy Wraps</h4>
+                            <p>Tortilla wrap <br>Vegan Tacos</p>
+                            <button class="slider-card-btn">Try Now <i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                    <div class="slider-card">
+                        <img src="./images/sliderimg4.jpg">
+                        <div class="slider-content sweet-card">
+                            <h4>Sweet Sensation</h4>
+                            <p>Delicious<br>Chia Pudding</p>
+                            <button class="slider-card-btn">Try Now <i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                    <div class="slider-card">
+                        <img src="./images/sliderimg5.jpg">
+                        <div class="slider-content">
+                            <h4>Italian Specials</h4>
+                            <p>Penne Pasta with <br>Chicken Tomatoes</p>
+                            <button class="slider-card-btn">Try Now <i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                    <div class="slider-card">
+                        <img src="./images/sliderimg6.jpg">
+                        <div class="slider-content">
+                            <h4>Chinese Cuisines</h4>
+                            <p>Hot &amp; Spicy <br> Rice Noodles</p>
+                            <button class="slider-card-btn">Try Now <i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-right-btn">
+                    <button class="sliderbtns" id="nextbtn"><i class="fa-solid fa-caret-right"></i></button>
+                </div>
+            </div>
+
+            <!--Menu list buttons-->   
+            <div>
+                <h3 class="menulist-heading">Our Menu</h3>
+            </div>            
+            <div class="menu-list-container">
+                <ul class="menu">
+                    <li><h3 class="menu-heading">Categories</h3></li>
+                    <li><a href="#veg"><i class="fa-solid fa-leaf"></i> Veg</a></li>
+                    <li><a href="#nonveg"><i class="fa-solid fa-shrimp"></i> Non-veg</a></li>
+                    <li><a href="#healthy"><i class="fa-solid fa-apple-whole"></i> Healthy</a></li>
+                    <li><a href="#chinese"><i class="fa-solid fa-bowl-food"></i> Chinese</a></li>
+                    <li><a href="#dessert"><i class="fa-solid fa-cheese"></i> Dessert</a></li>
+                    <li><a href="#drinks"><i class="fa-solid fa-martini-glass-citrus"></i>
+                        Drinks</a></li>
+                    <li><a href="#">Sort <i class="fa-solid fa-list" style="padding-left: 10px;"></i>
+                        </a></li>
+                </ul>
+            </div>
+
+            <!-- list of food items container-->
+            <div class="food-item-image-container">
+                <div class="card" id="all">
+                    <div class="card-image">
+                        <img src="./images/img1.jpg">
+                    </div>
+                    <div class="card-details">
+                        <h4 class="card-heading">Veg Salad</h4>
+                        <button class="card-btn" onclick="dispalyDt()">view</button>
+                    </div>
+                </div>
+                <div class="card" id="veg">
+                    <div class="card-image">
+                        <img src="./images/img2.jpg">
+                    </div>
+                    <div class="card-details">
+                        <h4 class="card-heading">Healthy Wraps</h4>
+                        <button class="card-btn" onclick="dispalyDt()">view</button>
+                    </div>
+                </div>
+                <div class="card" id="healthy">
+                    <div class="card-image">
+                        <img src="./images/img3.jpg">
+                    </div>
+                    <div class="card-details">
+                        <h4 class="card-heading">Mexican Salad</h4>
+                        <button class="card-btn" onclick="dispalyDt()">view</button>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="./images/img4.jpg">
+                    </div>
+                    <div class="card-details">
+                        <h4 class="card-heading">Green Pasta</h4>
+                        <button class="card-btn" onclick="dispalyDt()">view</button>
+                    </div>
+
+                </div>
+                <div class="card" id="nonveg">
+                    <div class="card-image">
+                        <img src="./images/img5.jpg">
+                    </div>
+                    <div class="card-details">
+                        <h4 class="card-heading">Salmon Steak</h4>
+                        <button class="card-btn" onclick="dispalyDt()">view</button>
+                    </div>
+                </div>
+                <div class="card" id="chinese">
+                    <div class="card-image">
+                        <img src="./images/img6.jpg">
+                    </div>
+                    <div class="card-details">
+                        <h4 class="card-heading">Rice Noodles</h4>
+                        <button class="card-btn" onclick="dispalyDt()">view</button>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="./images/img7.jpg">
+                    </div>
+                    <div class="card-details">
+                        <h4 class="card-heading">Chicken Skewers</h4>
+                        <button class="card-btn" onclick="dispalyDt()">view</button>
+                    </div>
+
+                </div>
+
+                <div class="card" id="dessert">
+                    <div class="card-image">
+                        <img src="./images/img8.jpg">
+                    </div>
+                    <div class="card-details">
+                        <h4 class="card-heading">Chai Pudding</h4>
+                        <button class="card-btn" onclick="dispalyDt()">view</button>
+                    </div>
+
+                </div>
+                <div class="card" id="drinks">
+                    <div class="card-image">
+                        <img src="./images/img9.jpg">
+                    </div>
+                    <div class="card-details">
+                        <h4 class="card-heading">Drinks</h4>
+                        <button class="card-btn" onclick="dispalyDt()">view</button>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="./images/img10.jpg">
+                    </div>
+                    <div class="card-details">
+                        <h4 class="card-heading">Grilled Chicken</h4>
+                        <button class="card-btn" onclick="dispalyDt()">view</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="./images/img11.jpg">
+                    </div>
+                    <div class="card-details">
+                        <h4 class="card-heading">Quinoa Salad</h4>
+                        <button class="card-btn" onclick="dispalyDt()">view</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="./images/img12.jpg">
+                    </div>
+                    <div class="card-details">
+                        <h4 class="card-heading">Brazilian Shrimp</h4>
+                        <button class="card-btn" onclick="dispalyDt()">view</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="./images/img13.jpg">
+                    </div>
+                    <div class="card-details">
+                        <h4 class="card-heading">Burger</h4>
+                        <button class="card-btn" onclick="dispalyDt()">view</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="./images/img14.jpg">
+                    </div>
+                    <div class="card-details">
+                        <h4 class="card-heading">Dessert</h4>
+                        <button class="card-btn" onclick="dispalyDt()">view</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="./images/img15.jpg">
+                    </div>
+                    <div class="card-details">
+                        <h4 class="card-heading">Dumplings</h4>
+                        <button class="card-btn" onclick="dispalyDt()">view</button>
+                    </div>
+                </div>
+                <div class="card viewmore-card">
+                    <i class="fa-solid fa-circle-arrow-right" style="font-size: 50px" onclick="message()"></i>
+                    <h3 class="card-heading">View more..</h3>
+                </div>
+
+            </div>
+
+            <!--  Why choose code start here -->
+            <div class="choose-container">
+                <div class="choose-header">
+                    <h2>Why Choose Us</h2>
+                </div>
+                <div class="choose-card-container">
+                    <div class="choose-card">
+                        <img src="./images/choose1.png">
+                        <h4 class="choose-card-heading">Quality Food</h4>
+                        <p class="choose-card-description">We not only deliver taste but also the quality</p>
+                    </div>
+                    <div class="choose-card">
+                        <img src="./images/choose2.png">
+                        <h4 class="choose-card-heading">Easy To Order</h4>
+                        <p class="choose-card-description">You only need few steps in odering food</p>
+                    </div>
+                    <div class="choose-card">
+                        <img src="./images/choose3.jpg">
+                        <h4 class="choose-card-heading">Automated Packaging</h4>
+                        <p class="choose-card-description">We take all the precautive measures to our food clean and healthy</p>
+                    </div>
+                    <div class="choose-card">
+                        <img src="./images/choose4.png">
+                        <h4 class="choose-card-heading">Fastest Delivery</h4>
+                        <p class="choose-card-description">Delivery the food that is always ontime even faster</p>
+                    </div>
+                </div>
+                <div class="choose-email-container">
+                    <h3>Get In Touch With Us</h3>
+                    <p class="choose-email-description">Questions Or Feedback? <br>
+                        We would love to hear from you.</p>
+                    <button class="choose-email-btn" type="button" onclick="alert('Email sent')">Email us</button>
+                </div>
+            </div>
+
+            <!--Footer starts here-->
+            <footer>
+
+                <div class="bg-reference-container">
+                    <div class="reference">
+                        <ul>
+                            <li>
+                                <h3 class="reference-heading">Company</h3></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <h3 class="reference-heading">Contact</h3></li>
+                            <li><a href="#">Help &amp; Support</a></li>
+                            <li><a href="#">Partner with us</a></li>
+                            <li><a href="#">Ride with us</a></li>
+                            <li><a href="#">Report Fraud</a></li>
+                            <li><a href="#">Site Map</a></li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <h3 class="reference-heading">Legal</h3></li>
+                            <li><a href="#">Terms &amp; Conditions</a></li>
+                            <li><a href="#">Refund &amp; Cancellation</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                            <li><a href="#">Discount vouchers</a></li>
+                        </ul>
+
+                    </div>
+
+                    <div class="appdownload-links">
+                        <h3>Download app</h3>
+                        <a href="#"><img src="./images/app%20logo1.png"></a>
+                        <a href="#"><img src="./images/app%20logo2.png"></a>
+
+                    </div>
+
+                </div>
+
+                <div class="reference-bottom">
+                    <div class="logo">
+                        <h2>Nutri CheF.</h2>
+                    </div>
+                    <div class="copyright">
+                        <h5>Copyright © 2021 Nutri CheF.</h5>
+                    </div>
+                    <div class="social-media-links">
+                        <b>Follow Us</b>
+                        <i class="fa-brands fa-instagram fa-xl" style="color: #ff058a;"></i>
+                        <i class="fa-brands fa-square-facebook fa-xl" style="color: #2066df;"></i>
+                        <i class="fa-brands fa-square-twitter fa-xl" style="color: #00b3ff;"></i>
+                        <i class="fa-brands fa-square-pinterest fa-xl" style="color: #e61b05;"></i>
+                    </div>
+                </div>
+
+            </footer>
+
+
+            <!-- Popup html code starts here -->
+            <div class="popup-position">
+                <div class="bg-dishdetails">
+
+                    <div class="detailed-card">
+                        <div class="detailed-card-image">
+                            <img src="images/cardimg.jpg" class="dish-image">
+                            <div class="rating">
+                                <h4><i class="fa-solid fa-star fa-lg" style="color: #ffdd00;"></i>4.5</h4>
+                                <h4><i class="fa-solid fa-indian-rupee-sign"></i> 250/-</h4>
+                            </div>
+                        </div>
+                        <div class="detailed-card-description">
+                            <div>
+                                <button class="close-card"><b>&#9587;</b></button>
+                            </div>
+                            <h2>Atlantic Salmon</h2>
+                            <h4>Ingredients</h4>
+                            <p>Atlantic salmon, Coconut milk, Fresh yogurt drizzle with coriander leaves, Butter, Toasted almonds.</p>
+                            <h4>Nutrition</h4>
+                            <ul style="padding-left: 25px;">
+                                <li>Calories: 272kcal</li>
+                                <li>Carbohydrates: 7g</li>
+                                <li>Protein: 25g</li>
+                                <li>Fat: 17g</li>
+                            </ul>
+                            <button class="card-btn" onclick="message()">Order now</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Popup html code ends here-->
+
+            <!-- Login card html code ends here-->
+            <div class="popup-position2"> 
+                <div class="loginform">
+                    <div class="logincard">
+                        <div class="login-close" >
+                            <button><b>&#9587;</b></button>
+                        </div>
+                        <div class="lgn-imgcard">
+                            <h1>Login</h1>
+                        </div>
+                        <form action="#">
+                            <div class="form">
+                                <div class="row">
+                                    <label><i class="fa-solid fa-user"></i>
+                                        <input type="text" placeholder="Email/phone"></label>
+                                </div>
+                                <div class="row">
+                                    <label><i class="fa-solid fa-lock"></i>
+                                        <input type="password" placeholder="password"></label>
+                                </div>
+                                <div class="password"><a href="#">Forget Password..?</a></div>
+                                <div class="row lgbtn">
+                                    <input type="submit" value="Login">
+                                </div>
+                                <div class="signup">
+                                    Not a member? <a href="#">Signup now</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Login card html code ends here-->
+
+            </div>
+        </div>
+
+        <!-- Screen orientation Code starts here. When screen changes from portrait to lanscape it error message will appear-->
+        <div id=rotate>
+            <div class="rotate-image">
+                <img src="./images/rotateimg.JPG">
+                <div class="message">
+                    <h3>Rotate your device</h3>
+                    <p>We donot support landscape mode yet. Please go back to potrait mode for the better experience</p>
+                </div>
+            </div>
+        </div>
+        <!-- Screen orientation Code starts here-->
+
+        <!-- JavaScript code -->
+        <script>
+
+            /* Display login script */
+            function dispalyLogin() {
+                document.querySelector('.popup-position2').style.zIndex='5';
+                document.querySelector('.loginform').style.display='flex';
+            }
+            document.querySelector('.login-close').addEventListener('click',function(){
+                document.querySelector('.loginform').style.display='none';
+                document.querySelector('.popup-position2').style.zIndex='-5';
+            });
+            document.querySelector('.lgbtn').addEventListener('click',function(){
+                document.querySelector('.loginform').style.display='none';
+                document.querySelector('.popup-position2').style.zIndex='-5';
+            });
+
+            /* Slider buttons script*/
+            function scrollLeft() {
+                var left = document.querySelector(".slider-card-container");
+                left.scrollBy(315, 0);
+            }
+            document.getElementById("nextbtn").addEventListener("click",scrollLeft);
+
+            function scrollright() {
+                var right = document.querySelector(".slider-card-container");
+                right.scrollBy(-315, 0);
+            }
+            document.getElementById("prevbtn").addEventListener("click",scrollright);
+
+            /* Popup script*/   
+            function changeBg() {
+                var navbar = document.getElementById('navbar');
+                var scrollValue = window.scrollY;
+                if (scrollValue > 50) {
+                    navbar.classList.add('active-nav');
+                } else {
+                    navbar.classList.remove('active-nav');
+                }
+            }
+            window.addEventListener('scroll', changeBg);
+
+            function dispalyDt() {
+                document.querySelector('.popup-position').style.zIndex='3';
+                document.querySelector('.bg-dishdetails').style.display='flex';
+            }
+            document.querySelector('.close-card').addEventListener('click',function(){
+                document.querySelector('.bg-dishdetails').style.display='none';
+                document.querySelector('.popup-position').style.zIndex='-3';
+            });
+
+            function message(){
+                alert('Hi all, Learning in progress will add more features in future. So, now just close the popup and view the website.For the better experience, view it in the laptop or PC');
+            }
+
+        </script>
+    </body>
+</html

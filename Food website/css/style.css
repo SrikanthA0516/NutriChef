@@ -1,0 +1,965 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Poppins&family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    padding: 5px 10px;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0);
+}
+.logo {
+    padding: 5px 10px;
+    cursor: pointer;
+    color: #ff6200;
+    letter-spacing: 2px;
+
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 55%;
+    display: flex;
+    justify-content: flex-end;
+}
+nav li a{
+    display: block;
+    text-decoration: none;
+    margin: 5px;
+    padding:5px 13px;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    border: 2px solid white;
+    border-radius: 2px;
+}
+nav li a:hover {
+    background-color: rgb(106, 106, 106);
+}
+.menu-btn i{
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+#menutoggle {
+    display: none;
+}
+#menutoggle:checked ~ ul {
+    display: block;
+}
+/* Code for changing the background color of navbar when scrolled down*/
+.active-nav {
+    background-color: black;
+    box-shadow: 0 1px 10px 0 black;
+    transition: all .5s;
+}
+
+.active-nav li a {
+    border: none;
+}
+.active-nav li a:hover {
+    background-color: rgba(0,0,0,0);
+    color: orange;
+}
+
+/* Logincard CSS code*/
+
+.popup-position2 {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    z-index: -5;
+}
+
+.loginform {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -5;
+
+}
+.logincard {
+    position: relative;
+    width: 350px;
+    height: 400px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+}    
+.login-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+.login-close button {
+    padding: 7px 10px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    font-size: 10px;
+    color: white;
+    background-color: black;
+    z-index: 3;
+    cursor: pointer;
+
+}
+.logincard .lgn-imgcard {
+    height: 150px;
+    top: 0;
+    left: 0;
+    background-color: black;
+    transition: all 0.5s ease;
+    background-image: url("../images/logincardimg0.JPG");
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lgn-imgcard h1 {
+    color: black;
+
+}
+.form {
+    padding: 30px 20px 25px;
+}
+.form .row {
+    height: 45px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.form .row input {
+    height: 100%;
+    width: 100%;
+    padding-left: 60px;
+    outline: none;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.form .row input:focus {
+    border:2px solid orange;
+}
+.form .row i {
+    position: absolute;
+    width: 50px;
+    height: 100%;
+    background-color: orange;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    border-radius: 5px 0 0 5px;
+}
+.form .lgbtn input{
+    background-color: orange;
+    padding-left: 0;  
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.form .password {
+    margin: -5px 0 15px;
+    font-size: 13px;
+}
+.form .password a{
+    text-decoration: none;
+    color: #ff9300;  
+}
+.form .signup {
+    text-align: center;
+    font-size: 13px;
+}
+.form .signup a {
+    color: #ff9300;    
+    text-decoration: none;
+}
+.form .password a:hover,.form .signup a:hover{
+    text-decoration: underline;
+}
+/* Logincard CSS code ends here*/
+
+/* Search CSS code*/
+.search-bg-container {
+    width:100%;
+    height: 70vh;
+    background-image: linear-gradient(to top,rgba(255, 255, 255, 0) 80%,rgba(0, 0, 0)),url('../images/header img.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+
+}
+.search-heading {
+    width: 50%;
+    color: white;
+    padding: 20px;
+    font-family: 'Comfortaa', cursive;
+}
+.search {
+    width: 50%;
+    background-color: white;
+    border: 0px;
+    border-radius: 25px;
+    padding: 5px 10px;
+}
+
+.search input[type=search] {
+    width: 85%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 5px 10px;
+
+}
+
+/* About site CSS code*/
+.aboutsite {
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+}
+.site-description {
+    font-size: 13px;
+    margin-top: 20px;
+    color:#3e3c3c;
+}
+
+/*  Offer slider  CSS code*/
+.slider {
+    width: 95%;
+    margin: auto;
+    padding: 10px;
+    overflow: hidden;
+    position: relative;
+    background-color: white;
+}
+.slider-heading {
+    padding-left:20px;
+}
+.slider-left-btn {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    z-index: 2;
+}
+.slider-right-btn {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+}
+.sliderbtns {
+    font-size: 20px;
+    padding: 3px 10px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    color: white;
+    background-color: darkorange;
+}
+.sliderbtns:hover {
+    transform: scale(1.1);
+    background-color: orange;
+}
+.slider-card-container {
+    display: flex;
+    align-items: center;
+    padding-left:  20px;
+    overflow-x: scroll;
+}
+.slider-card {
+    margin: 10px;
+    position: relative;
+}
+.slider-card img{
+    width:300px;
+    height: 170px;
+    border-radius: 4px;
+}
+.slider-card-container::-webkit-scrollbar {
+    -webkit-appearance:none;
+    display: none;
+}
+.slider-content {
+    position: absolute;
+    top: 20px;
+    padding: 10px;
+    color: #fff;
+    line-height: 25px;
+}
+.slider-card-btn {
+    border: none;
+    outline: none;
+    padding: 8px 40px 8px 8px;
+    background-color: #fdb718;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: bold;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 15px;
+
+}
+.slider-card-btn i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #ff9d00;
+    height: 100%;
+    font-size: 13px;
+    padding: 8px;
+}
+.sweet-card {
+    color: black !important;
+}
+
+
+/* Menu CSS code*/
+.menulist-heading {
+    margin-top: 20px;
+    text-align: center;
+}
+.menu-list-container {
+    background-color: white;
+    width: 100%;
+    padding: 15px;
+    overflow: hidden;
+}
+.menu-list-container .menu-heading {
+
+}
+.menu-list-container .menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;    
+    height: 70px;
+    display: flex;
+    align-items: center;
+    color:black;
+    margin: auto;
+    border-bottom: 2px solid #8b8b8b;
+    overflow: scroll;
+
+}
+.menu::-webkit-scrollbar {
+    -webkit-appearance:none;
+    display: none;
+}
+.menu li a {
+    text-decoration: none;
+    border: 2px solid #8b8b8b;
+    color: black;
+    background-color: white;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 10px;
+    margin: 0 10px;
+    padding: 5px 30px;
+    white-space: nowrap;
+}
+.menu li a:hover {
+    background-color: rgba(198, 197, 197, 0.31);
+}
+
+/* Food items list container CSS Code*/
+.food-item-image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 50px;
+    background-color: white;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 22%;
+    height: 250px;
+    margin: 15px 0px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+} 
+.card:hover {
+    opacity: .9;
+}
+.card-image {
+    width: 100%;
+    height: 65%;
+}
+.card-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    border-radius: 10px;
+}
+.card-details {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.card-heading {
+
+    padding: 10px;
+}
+.card-btn {
+    text-align: center;
+    background-color: #ff6200;
+    color: white;
+    border: 0px;
+    font-size: 16px;
+    font-weight: bold;
+    margin:0 0 10px;
+    padding: 5px 40px;
+    border-radius: 7px;
+    cursor: pointer;
+
+}
+.card-btn:hover {
+    background-color: #ff8000;
+}
+.viewmore-card {
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.viewmore-card i:hover {
+    color: #ff6200;
+}
+
+/* Why Choose CSS code */
+.choose-container {
+    background-color: rgba(235, 235, 235, 0.37);
+}
+.choose-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 0; 
+}
+.choose-header {
+    text-align: center;
+    padding: 10px;
+}
+.choose-card {
+    width: 20%;
+    height: 200px;
+    background-color: white;
+    border-radius:10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.choose-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+.choose-card-description {
+    margin-top: 20px;
+    color:#3e3c3c;
+    font-size: 10px;
+    font-weight: bold;
+}
+.choose-email-container {
+    text-align: center;
+    padding: 20px;
+}
+.choose-email-description {
+    font-size: 13px;
+    padding: 10px;
+}
+.choose-email-btn {
+    background-color: #ffa700;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    border-radius: 20px;
+    padding: 10px 40px;
+    margin: 10px;
+    cursor: pointer;
+}
+.choose-email-btn:hover {
+    background-color: #ff6200;
+}
+
+
+/* footer CSS code */
+footer {
+    background-color: black;
+}
+.bg-reference-container {
+    display: flex;
+    padding: 20px;
+}
+.reference {
+    width: 75%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.bg-reference-container ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.reference-heading {
+    color: #989595;
+    padding: 10px;
+}
+.reference li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    font-size: 13px;
+}
+
+.reference li a:hover {
+    color: orange;
+}
+.appdownload-links {
+    width: 25%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.appdownload-links a {
+    width: 100%;
+    height: 30%;
+}
+.appdownload-links a img {
+    width: 80%;
+    height: 100%;
+}
+.appdownload-links img:hover {
+    transform: scale(1.03);
+    transition: 0.2s ease;
+}
+
+.reference-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    margin: 0 30px;
+    padding:10px;
+    border-top: 1px solid white;
+}
+.social-media-links{
+    padding: 10px 5px;
+}
+.social-media-links b{
+    font-size: 13px;
+}
+
+.social-media-links i:hover {
+    transform: scale(1.3);
+    transition: 0.3s ease;
+}
+
+/* Pop-up CSS Code starts here*/
+
+.popup-position {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    z-index: -3;
+}
+
+.bg-dishdetails {
+    background-color: rgb(0, 0, 0,0.6);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+.detailed-card {
+    width: 50%;
+    height: 47%;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 15px;
+    position: relative;
+    z-index: 10;
+}
+.detailed-card-description {
+    width: 55%;
+    padding-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 13px;
+}
+.detailed-card-image {
+    width: 40%;
+    padding: 10px;
+}
+.dish-image {
+    width: 100%;
+    height: 80%;
+}
+.rating {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0 0;
+}
+.close-card {
+    position: absolute;
+    right: 15px;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 12px;
+    font-size: 10px;
+    cursor: pointer;
+    color: white;
+    background-color: black;
+}
+.close-card:hover {
+    color: black;
+    background-color: #ffd800;
+}
+
+/* css popup code ends here*/
+
+/* Media queries */
+
+@media screen and (max-width: 992px){
+
+    .card {
+        width: 31%;
+    }
+
+    /*popup media css*/
+
+    .detailed-card {
+        width: 60%;
+    }
+
+}
+@media screen and (max-width: 768px) {
+
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 45px;
+        right: 0; 
+        text-align: center;
+        background-color: #000000;
+        border-radius: 5px;
+    }
+
+    .menu-btn i{
+        display: inline-block;
+        padding: 10px 5px 5px;
+        font-size: 20px;
+    }
+    .search-bg-container {
+        background-image: linear-gradient(to right,rgba(0,0,0,0.4) 30%,rgba(255, 255, 255, 0)),url('../images/header img2.jpg');
+    }
+    .search {
+        width: 70%;
+    }
+    .card {
+        height: 200px;
+    }
+    .card-heading {
+        font-size: 13px;
+        padding: 5px 10px;
+    }
+    .bg-reference-container {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+    .reference {
+        width: 100%;
+        justify-content: space-around;
+    }
+    .reference-heading {
+        font-size: 16px;
+    }
+    .appdownload-links {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 20px 0 0;
+    }
+    .appdownload-links a {
+        width: 25%;
+        font-size: 13px;
+    }
+    .appdownload-links a img {
+        width: 100%;
+    }
+    .reference-bottom .copyright {
+        display: none;    
+    }
+    /*popup media queries css*/
+
+    .detailed-card {
+        width: 75%;
+        padding: 10px;
+    }
+    .detailed-card-description {
+        width: 50%;
+        padding-left: 5px;
+        font-size: 13px;
+    }
+    .detailed-card-image {
+        width: 48%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    nav ul {
+        width: 100%;
+        border-radius: 0;
+    }
+    nav li a {
+        border: none;
+    }
+
+    .search-bg-container {
+        align-items: center;
+        padding-left: 0;
+        background-image:linear-gradient(to left,rgba(255, 255, 255, 0) 45%,rgba(0, 0, 0,0.5)),url('../images/header img3.jpg');
+        height: 450px;
+
+    }
+
+    .search {
+        width: 90%;
+        font-size: 13px;
+    }
+    .search-heading {
+        width: 80%;
+    }
+    .search input[type=search] {
+        font-size: 13px;
+        width: 85%;
+    }
+    .food-item-image-container {
+        margin: 20px;
+    }
+    .card {
+        width: 47%;
+    }
+
+    .card-btn {
+        font-size: 13px;
+        padding: 5px 40px;
+
+    }
+    /*choose card  css media queries*/
+    .choose-card {
+        width: 40%;
+    }
+
+    /*popup media queries css*/
+    .detailed-card {
+        width: 90%;
+    }
+    .detailed-card-description {
+        width: 53%;
+    }
+    .detailed-card-image {
+        width: 45%;
+    }
+
+}
+@media screen and (max-width: 500px) {
+    .logo {
+        color: #fa8a02;
+    }
+    .menu-heading {
+        font-size: 13px;
+    }
+    .menu li a {
+        font-size: 11px;
+        padding: 5px 20px;
+    }
+    /*choose card  css media queries*/
+    .choose-card {
+        width: 45%;
+        height: 200px;    
+        padding: 10px;
+    }
+    .choose-card img {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    .reference li a {
+        font-size: 10px;
+        padding: 5px 10px;
+    }
+    .appdownload-links h3{
+        font-size: 13px;
+    }
+
+    .reference-bottom {
+        display: flex;
+        flex-direction: column;
+    }
+    .reference-bottom .copyright {
+        display: block;
+        font-size: 13px;
+    }
+    .social-media-links i{
+        padding: 0 5px;
+    }
+
+    /*popup media queries css*/
+
+    .detailed-card {
+        width: 95%;
+        height: 330px;
+    }
+    .detailed-card-description {
+        width: 58%;
+    }
+    .detailed-card-image {
+        width: 42%;
+    }
+
+}
+@media screen and (max-width: 400px) {
+    .search-heading {
+        font-size: 20px;
+    }
+    .search input[type=search] {
+        width: 80%;
+    }
+    .card {
+        height: 180px;
+    }
+    .card-btn {
+        padding: 5px 25px;
+
+    }
+    /*popup media queries css*/
+    .detailed-card {
+        height: 300px;
+    }
+    .detailed-card-description {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 300px) {
+    .food-item-image-container {
+        margin: 20px 35px;
+    }
+    .card {
+        width: 100%;
+    }
+    /*choose card  css media queries*/
+    .choose-card {
+        width: 85%;
+        height: 200px;    
+        padding: 10px;
+    }
+    .choose-card img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 15px;
+    }
+    .rating {
+        font-size: 12px;
+    }
+    .detailed-card {
+        height: 45%;
+    }
+
+}
+
+
+/* Screen orientation CSS Code starts here */
+.rotate-image {
+    widows: 100vw;
+    height: 100vh;
+    display:flex;
+    padding: 30px;
+}
+.rotate-image img {
+    width: 90%;
+    height: 95%;
+    border-right: 2px solid #7c7c7c;
+}
+.rotate-image .message {
+    padding: 20px;
+    align-self: center;
+    text-align: center;
+}
+.rotate-image .message p{
+    color: #656565;
+    font-size: 13px;
+    padding: 10px;
+}
+
+#rotate {
+    display: none;
+}
+@media screen and (max-height:450px) and (max-width: 992px) and (orientation:landscape) {
+    #container {
+        display: none;
+    }
+    #rotate {
+        display: block;
+    }
+}
